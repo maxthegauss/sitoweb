@@ -1,0 +1,38 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="stilesito2.css">
+    <script>
+        function caesarCipher(str, shift) {
+            return str.split('').map(char => {
+                if (char.match(/[a-z]/i)) {
+                    const code = char.charCodeAt(0);
+                    const base = (code >= 65 && code <= 90) ? 65 : 97;
+                    return String.fromCharCode(((code - base + shift) % 26) + base);
+                }
+                return char;
+            }).join('');
+        }
+
+        function encryptText() {
+            const inputText = document.getElementById('inputText').value;
+            const key = parseInt(document.getElementById('key').value);
+            
+            if (isNaN(key) || key >= 20) {
+                alert("La chiave deve essere un numero minore di 20!");
+                return;
+            }
+
+            const encryptedText = caesarCipher(inputText, key);
+            document.getElementById('outputText').value = encryptedText;
+        }
+    </script>
+</head>
+<body>
+     <div class="container">   
+        <h1>Cifratura di Cesare</h1>
+        <input type="text" id="inputText" placeholder="Scrivi qui...">
+        <input type="text" id="key" placeholder="Inserisci la chiave numerica (minore di 20)...">
+        <button onclick="encryptText()">Cifra testo</button>
+        <input type="text" id="outputText" placeholder="Il testo cifrato apparirà qui...">
+    </div>
+</body>
+</html>

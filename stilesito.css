@@ -1,0 +1,62 @@
+/* CSS Document */
+
+h1{
+font-family: Cooper Black;
+font-size:30px;
+color:black;
+text-align:center;
+}
+
+body{
+background-color:#F0F0F0;
+}
+
+#body1{
+background-color:#e8fcfa;
+}
+
+#body2{
+background-color:white;
+}
+
+
+p{
+font-family: verdana;
+font-size:13px;
+}
+
+img {
+  margin: auto;
+  display: block;
+  border: 2px solid black;
+}
+
+#img1 {
+  margin: auto;
+  display: block;
+  border: 1px solid transparent;
+}
+
+table, tr, td 
+{
+background-color:#FFFFFF;
+font-family: verdana;
+border: 1px solid;
+width: 630px; 
+height: 40px;
+}
+
+a
+{
+font-family: verdana;
+font-size:13px;
+text-decoration:none;
+color:blue;
+}
+
+ol, li
+{
+font-family: verdana;
+font-size:13px;
+}
+
